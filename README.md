@@ -5,7 +5,7 @@ Additions for bash - aliases and functions which can come in handy
 Clone this repo into your home directory: 
 ```bash
 cd ~
-git clone 
+git clone https://github.com/lisawolderiksenSSB/bash_additions.git 
 ```
 
 Include the bash_additions file in your `~/.bash_profile` so the aliases and functions are available in new terminals/shell windows: 
