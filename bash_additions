@@ -1,19 +1,27 @@
-#### ALIASES #### 
+#### ALIASES ####
 
 
-#### FUNCTIONS #### 
-# Make new directory (or hierarchy of directories) and change into it 
+#### FUNCTIONS ####
+# Make new directory (or hierarchy of directories) and change into it
 mkcd() {
   mkdir -p $1
-  cd $1 
+  cd $1
 }
 
-# git clone, then cd into the created directory 
-clonecd() { 
-  echo "Doing git clone using parameter '$1'" 
+# git clone, then cd into the created directory
+clonecd() {
+  echo "Doing git clone using parameter '$1'"
   git clone $1
 
   reponame=$(basename $1 .git)
   echo "changing directory to $reponame"
   cd $reponame
+}
+
+# git add, commit and push
+acp(){
+  echo "Doing git add, commit and push using parameter '$1'"
+  git add .
+  git commit -am '$1'
+  git push
 }
