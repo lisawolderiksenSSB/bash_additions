@@ -23,5 +23,5 @@ acp(){
   echo "Doing git add, commit and push using parameter '$1'"
   git add .
   git commit -am '$1'
-  git push
+   git push --set-upstream origin push
 }
