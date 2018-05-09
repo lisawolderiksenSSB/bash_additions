@@ -1,4 +1,9 @@
+#### STARTUP #### 
+echo "Using bash_additions"
+
+
 #### ALIASES #### 
+alias ll="ls -lhA"
 
 
 #### FUNCTIONS #### 
