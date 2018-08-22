@@ -25,6 +25,7 @@ acp(){
   git commit -am '$1'
   echo "Checking whether origin is set"
   remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+
   if [ ! -z "$remote" ]; then
     echo "Origin set, pushing"
     git push
