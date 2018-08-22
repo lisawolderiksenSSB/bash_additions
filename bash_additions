@@ -20,8 +20,16 @@ clonecd() {
 
 # git add, commit and push
 acp(){
-  echo "Doing git add, commit and push using parameter '$1'"
+  echo "Doing git add, commit and push using message '$1'"
   git add .
   git commit -am '$1'
-  git push --set-upstream origin push
+  echo "Checking whether origin is set"
+  remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+  if [ ! -z "$remote" ]; then
+    echo "Origin set, pushing"
+    git push
+  else
+    echo "No origin set, setting origin and performing push"
+    git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`
+  fi
 }
