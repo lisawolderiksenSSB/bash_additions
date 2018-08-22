@@ -22,10 +22,9 @@ clonecd() {
 acp(){
   echo "Doing git add, commit and push using message '$1'"
   git add .
-  git commit -am '$1'
+  git commit -am "$1"
   echo "Checking whether origin is set"
   remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
-
   if [ ! -z "$remote" ]; then
     echo "Origin set, pushing"
     git push
