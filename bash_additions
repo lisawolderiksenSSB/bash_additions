@@ -1,5 +1,9 @@
-#### ALIASES ####
+#### STARTUP ####
+echo "Using bash_additions"
 
+
+#### ALIASES ####
+alias ll="ls -lhA"
 
 #### FUNCTIONS ####
 # Make new directory (or hierarchy of directories) and change into it
