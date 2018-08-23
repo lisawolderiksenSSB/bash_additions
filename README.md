@@ -18,7 +18,7 @@ Include the bash_additions file in your `~/.bash_profile` so the aliases and fun
 source ~/bash_additions/bash_additions
 ```
 
-To use the aliases and functions in the *current* terminal/shell, run the same command in the terminal/shell:
+To use the aliases and functions in the *current* terminal/shell, run the same command directly in the terminal/shell:
 ```bash
 source ~/bash_additions/bash_additions
 ```
