@@ -13,12 +13,12 @@ cd ~
 git clone git@github.com:statisticsnorway/bash_additions.git
 ```
 
-Include the bash_additions file in your `~/.bash_profile` so the aliases and functions are available in *new* terminals/shell windows by adding the following line to `~/.bash_profile`:
+Include the bash_additions file in your `~/.bash_profile` so the aliases and functions are available in *new* shells by adding the following line to `~/.bash_profile`:
 ```bash
 source ~/bash_additions/bash_additions.sh
 ```
 
-To use the aliases and functions in the *current* terminal/shell, run the same command directly in the terminal/shell:
+To use the aliases and functions in the *current* shell, run the same command directly in the shell:
 ```bash
 source ~/bash_additions/bash_additions.sh
 ```
