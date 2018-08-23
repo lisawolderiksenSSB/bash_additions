@@ -29,18 +29,22 @@ clonecd() {
 }
 
 # git add, commit and push.
-# Takes one parameter: A commit message. (If no parameter is supplied, the commit message will be "$1"...)
+# Takes one parameter: A commit message. (If no parameter is supplied, the script will not do anything...)
 acp(){
-  echo "Doing git add, commit and push using message '$1'"
-  git add .
-  git commit -am "$1"
-  echo "Checking whether origin is set"
-  remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
-  if [ ! -z "$remote" ]; then
-    echo "Origin set, pushing"
-    git push
+  if [ -z "$1" ]; then
+    echo "No message provided. Please provide a commit message, like so: acp \"My commit message\""
   else
-    echo "No origin set, setting origin and performing push"
-    git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`
+    echo "Doing git add, commit and push using message '$1'"
+    git add .
+    git commit -am "$1"
+    echo "Checking whether origin is set"
+    remote=$(git rev-parse --abbrev-ref --symbolic-full-name @{u})
+    if [ ! -z "$remote" ]; then
+      echo "Origin set, pushing"
+      git push
+    else
+      echo "No origin set, setting origin and performing push"
+      git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`
+    fi
   fi
-}  
+}
