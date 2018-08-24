@@ -29,3 +29,12 @@ Please feel free to add your own bash aliases, functions etc. if you think they 
 Consider adding your contributions in a new file, if they are "specialised" in some way. It might make sense to have a separate "git_additions" or "google_cloud_additions" or similar, containing aliases and functions for those use cases.
 
 Anyone in the statisticsnorway GitHub organization can push to this repo. So go ahead - just do it! :) (Please follow the normal procedures using branches and pull requests, though.)
+
+## Resources
+
+Here you can add useful resources for your development needs.
+
+### Git
+
+* [SCM Breeze](https://github.com/scmbreeze/scm_breeze)
+* [Git Bash for Mac](https://github.com/fabriziocucci/git-bash-for-mac)
