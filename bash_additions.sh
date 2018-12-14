@@ -4,7 +4,7 @@ echo "Using bash_additions"
 
 #### ALIASES ####
 alias ll="ls -lhA"
-
+alias fluxlog="kubectl logs deployment/ssb-flux-helm-operator -f -n flux"
 
 #### FUNCTIONS ####
 
